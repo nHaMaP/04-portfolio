@@ -1,5 +1,6 @@
 
 @use 'abstracts/variables' as v;
+@use 'sass:map'; // to use map functions if needed
 
 @mixin breakpoint($bp) {
 
@@ -9,21 +10,34 @@
     }
   }
 
-  @if $bp == tablethorizontal {
-    @media (min-width: v.$bp-tablet-horizontal) {
+  @if $bp == desktopS {
+    @media (min-width: v.$bp-desktopS) {
       @content;
     }
   }
 
-  @if $bp == desktop {
-    @media (min-width: v.$bp-desktop) {
+  @if $bp == desktopM {
+    @media (min-width: v.$bp-desktopM) {
       @content;
     }
   }
 
-  @if $bp == desktopxl {
-    @media (min-width: v.$bp-desktop-xl) {
+  @if $bp == desktopL {
+    @media (min-width: v.$bp-desktopL) {
       @content;
     }
   }
+}
+
+@mixin reset_ul { // reset list-style formatting
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin apply_font($font-map) {
+  font-family: map-get($font-map, family);
+  font-size: map-get($font-map, size);
+  line-height: map-get($font-map, line-height);
+  letter-spacing: map-get($font-map, spacing);
 }

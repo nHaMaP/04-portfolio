@@ -1,0 +1,25 @@
+/*
+
+@@ -- HEADINGS -- @@
+---------------------
+
+Space Grotesk Bold
+- XL: 88px line-height: 88px, spacing: -2.5px
+- L: 48px line-height: 56px, spacing: -1.5px
+- M: 24px line-height: 32px, spacing: 0px
+
+@@ -- BODIES  -- @@
+-------------------
+Space Grotesk Medium
+- L: 18px line-height: 28px, spacing: 0px
+*/
+
+@font-face {
+    font-family: 'Space Grotesk Bold';
+    src: url(../../assets/fonts/SpaceGrotesk-Bold.ttf);
+}
+
+@font-face {
+    font-family: 'Space Grotesk Medium';
+    src: url('../../assets/fonts/SpaceGrotesk-Medium.ttf');
+}
