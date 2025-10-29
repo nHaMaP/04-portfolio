@@ -11,6 +11,8 @@ node_modules
 dist
 dist-ssr
 *.local
+# preventing cache creatin for gh-pages
+node_modules/.cache/gh-pages
 
 # Editor directories and files
 .vscode/*
