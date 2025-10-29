@@ -1,5 +1,5 @@
 
-@use 'abstracts/variables' as v;
+@use './variables' as v;
 @use 'sass:map'; // to use map functions if needed
 
 @mixin breakpoint($bp) {
