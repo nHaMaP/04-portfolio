@@ -41,3 +41,17 @@
   line-height: map-get($font-map, line-height);
   letter-spacing: map-get($font-map, spacing);
 }
+
+@mixin btn {
+  font-family: 'Space Grotesk Bold';
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 2.29px;
+  text-decoration: underline;
+  text-decoration-color: v.$green;
+  text-underline-offset: 10px;
+}
+
+@mixin btn_hover {
+  color: v.$green;
+}
