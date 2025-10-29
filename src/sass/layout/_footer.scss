@@ -1,0 +1,72 @@
+@use '../abstracts/abstracts' as v;
+
+footer {
+    
+    background-color: v.$darkgrey;
+
+    .contact {
+
+        text-align: center;
+        h1 {
+            @include v.apply_font(v.$headingS);
+            color: v.$white;
+            text-transform: capitalize;
+            padding-top: 60px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            @include v.apply_font(v.$bodyM);
+            color: v.$grey;
+            margin-bottom: 50px;
+        }   
+    }
+
+    .contact-form {
+
+        margin-bottom: 127px;
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-left: 10px;
+            margin-right: 10px;
+            row-gap: 32px;
+
+            p {
+
+                input, textarea {
+                    @include v.apply_font(v.$bodyM);
+                    letter-spacing: -0.22px;
+                    color: v.$grey;
+                    text-transform: uppercase;
+
+                    width: 300px;
+                    margin-left: 20px;
+                    margin-right:20px;
+                    border: none;
+                    border-bottom: 1px solid v.$white;
+                    background-color: v.$darkgrey;
+    
+                }
+
+                textarea {
+                    height: 147px;
+                }                
+            }
+
+            .btn {                  
+                @include v.btn;
+                position: relative;
+                left: 170px;
+            }   
+        }
+    }   
+    .hdr {
+
+        padding-bottom: 60px;
+
+    }
+
+}

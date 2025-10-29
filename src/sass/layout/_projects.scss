@@ -59,29 +59,31 @@
                 margin: 0;
                 img { 
                     width: 343px;
+                    margin-bottom: 20px;
                 }
             }
 
             h4 {
+                margin-top: 0;
+                margin-bottom: 7px;
                 @include v.apply_font(v.$headingM);
                 text-transform: uppercase;
 
             }
 
             .technologies {
-
-                flex-direction: row;
-                column-gap: 18px;
                 
                 ul {
                     display: flex;
                     flex-direction: row;
+                    gap: 18px;
 
                     li {
 
                         p {
                             @include v.apply_font(v.$bodyL);      
                             text-transform: uppercase;
+                            margin-bottom: 20px;
                         }
                     }
                 }
@@ -94,6 +96,7 @@
                 flex-direction: row;
                 column-gap: 30px;
                 @include v.btn;
+                margin-bottom: 40px;
 
                 li {
                     a {

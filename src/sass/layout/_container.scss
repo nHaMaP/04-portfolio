@@ -1,7 +1,6 @@
 @use '../abstracts/abstracts' as v;
 
 
-
 .container {
     margin: 0;
     padding: 0;
@@ -11,7 +10,21 @@
 
     background-color: v.$black;
 
+    overflow: hidden;
+    overflow-x:hidden;
+
     ul {
         @include v.reset_ul;
     }
+
+    /*background-image: url('../../assets/img/actorPortrait.png');
+    background-repeat: no-repeat;
+    background-size:174.21px;
+    background-position-x: 101.24px;
+    background-position-y: 141px;*/
+
+
+    /* background-image:linear-gradient(360deg,rgba(36, 36, 36, 0.67)
+    0%, rgba(36, 36, 36, 0.35) 48%, rgba(36, 36, 36, 0) 74%);*/
+
 }
