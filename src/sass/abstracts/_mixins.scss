@@ -33,23 +33,27 @@
   margin: 0;
   padding: 0;
   list-style: none;
+  display: flex;
+  flex-direction: column;
 }
 
 @mixin apply_font($font-map) {
-  font-family: map-get($font-map, family);
-  font-size: map-get($font-map, size);
-  line-height: map-get($font-map, line-height);
-  letter-spacing: map-get($font-map, spacing);
+  font-family: map.get($font-map, font-family);
+  font-size: map.get($font-map, font-size);
+  line-height: map.get($font-map, line-height);
+  letter-spacing: map.get($font-map, letter-spacing);
 }
 
 @mixin btn {
-  font-family: 'Space Grotesk Bold';
-  font-size: 16px;
-  line-height: 26px;
-  letter-spacing: 2.29px;
-  text-decoration: underline;
-  text-decoration-color: v.$green;
-  text-underline-offset: 10px;
+    font-family: "Space Grotesk Medium";
+    font-size: 14px;
+    line-height: 26px;
+    letter-spacing: 4.29px;
+    text-decoration: underline;
+    text-decoration-color: #4EE1A0;
+    text-underline-offset: 15px;
+    color: #FFFFFF;
+    text-transform: uppercase;
 }
 
 @mixin btn_hover {

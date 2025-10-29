@@ -1,0 +1,9 @@
+@use '../abstracts/abstracts' as v;
+
+body {
+    margin: 0;
+
+    .btn {
+        @include v.btn;
+    }
+}

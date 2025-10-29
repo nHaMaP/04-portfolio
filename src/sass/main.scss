@@ -1,6 +1,4 @@
-
-
-                                                    /* EJEMPLOS DE USO */
+/* EJEMPLOS DE USO */
 
 @use './abstracts/abstracts' as abs;          //namespace abs       --> color: abs.$primary-color // @include abs.center-flex;
 @use './base/base' as base;                   //namespace base      --> @include base.some-mixin;
@@ -8,4 +6,5 @@
 @use './layout/layout' as ly;                 //namespace ly        --> @include ly.header-mixin;
 @use './pages/pages' as pg;                   //namespace pg        --> .pg-home { //estilos } 
 @use './themes/themes' as th;                 //namespace th        --> background: th.$dark-background;
-@use './vendors/vendors' as vd                //namespace vd        --> 
+@use './vendors/vendors' as vd;                //namespace vd        --> 
+

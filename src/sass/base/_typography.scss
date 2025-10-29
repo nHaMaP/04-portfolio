@@ -14,12 +14,17 @@ Space Grotesk Medium
 - L: 18px line-height: 28px, spacing: 0px
 */
 
+// Fonts no cargan bien --> @import
+// @import no carga bien --> <link> 
+
 @font-face {
     font-family: 'Space Grotesk Bold';
-    src: url(../../assets/fonts/SpaceGrotesk-Bold.ttf);
+    src: url('../../assets/fonts/space-grotesk.bold.otf');
 }
 
 @font-face {
     font-family: 'Space Grotesk Medium';
-    src: url('../../assets/fonts/SpaceGrotesk-Medium.ttf');
+    src: url('../../assets/fonts/space-grotesk.medium.otf');
 }
+
+

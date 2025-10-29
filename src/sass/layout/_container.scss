@@ -1,4 +1,17 @@
+@use '../abstracts/abstracts' as v;
+
+
 
 .container {
-    
+    margin: 0;
+    padding: 0;
+
+    min-width: 360px; //Mobile First -- GalaxyS8+ (360 x 740)
+    max-width: 360px;
+
+    background-color: v.$black;
+
+    ul {
+        @include v.reset_ul;
+    }
 }

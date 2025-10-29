@@ -1,0 +1,112 @@
+@use '../abstracts/abstracts' as v;
+
+.projects {
+
+    display: flex;
+    flex-direction: column;
+
+    color: v.$white;
+
+    &::before {
+        content: "";
+        background: #FFFFFF;
+        width: 343px;
+        height: 1px;
+        position: relative;
+        left: 8px;
+    }
+
+    .header-projects {
+        width: 343px;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        column-gap: 33px;
+        margin-bottom: 40px;
+        margin-left: 10px;
+
+        color: v.$white;
+
+        h2 {
+            @include v.apply_font(v.$headingS);
+        }
+
+        .btn {
+            font-weight: 500;
+            position: relative;
+            bottom: 5px;
+        }
+
+    }
+
+    .examples {
+
+        width: 343px;
+
+        display: flex;
+        flex-direction: column;
+
+        margin-left: 10px;
+        
+
+        article {
+
+            margin-bottom: 40px;
+
+            figure {
+                margin: 0;
+                img { 
+                    width: 343px;
+                }
+            }
+
+            h4 {
+                @include v.apply_font(v.$headingM);
+                text-transform: uppercase;
+
+            }
+
+            .technologies {
+
+                flex-direction: row;
+                column-gap: 18px;
+                
+                ul {
+                    display: flex;
+                    flex-direction: row;
+
+                    li {
+
+                        p {
+                            @include v.apply_font(v.$bodyL);      
+                            text-transform: uppercase;
+                        }
+                    }
+                }
+
+
+            }
+
+            .buttons {
+                display: flex;
+                flex-direction: row;
+                column-gap: 30px;
+                @include v.btn;
+
+                li {
+                    a {
+                        color: v.$white;
+                        text-decoration-color: v.$green;
+                    }
+                }
+
+
+            }
+
+        }
+
+    }
+
+}

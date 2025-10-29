@@ -1,0 +1,42 @@
+@use '../abstracts/abstracts' as v;
+
+
+.title {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .portrait{
+
+        margin: 0;
+            img {
+                width: 174px;
+                margin-bottom: 40px;
+            }
+    }
+
+    .basic_info {
+        width: 343px;
+        text-align: center;
+        margin-bottom:80px;
+        h1 {
+            margin: 0;
+            @include v.apply_font(v.$headingS);
+            color: v.$white;
+
+            span {
+                text-decoration: underline;
+                text-underline-offset: 10px;
+                text-decoration-color: v.$green;
+            }
+        }
+
+        p {
+            @include v.apply_font(v.$bodyM);
+            color:v.$grey;
+            margin-bottom: 24px;
+        }
+
+        // div.btn -> buttons are defined in ./themes/default.scss
+    }
+}

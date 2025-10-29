@@ -35,9 +35,32 @@ $headingM: (
     letter-spacing: 0px
 );
 
+$headingMS: (
+    font-family: 'Space Grotesk Bold',
+    font-size:32px,
+    line-height:40px,
+    letter-spacing:-1px
+);
+
+$headingS: (
+    font-family: 'Space Grotesk Bold',
+    font-size: 40px,
+    line-height: 40px,
+    letter-spacing:-1.14px
+
+);
+
+
 $bodyL: (
     font-family: 'Space Grotesk Medium',
     font-size: 18px,
     line-height: 28px,
     letter-spacing: 0px
+);
+
+$bodyM: (
+    font-family:'Space Grotesk Medium',
+    font-size:16px,
+    line-height:26px,
+    letter-spacing:0px
 );
