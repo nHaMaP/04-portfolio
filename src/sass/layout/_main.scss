@@ -6,15 +6,35 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 215px;
+    padding-bottom: 80px;
+
+
+    .ovals3{
+        position: relative;
+        bottom: 280px;
+        right: 235px;
+    }
+
+    .ovals3-2 {
+        position: relative;
+        width: 15%;
+        bottom: 280px;
+        left: 155px;
+    }
+
 
     .basic_info {
         width: 343px;
         text-align: center;
-        margin-bottom:80px;
+        position: relative;
+        bottom: 260px;
+
         h1 {
             margin: 0;
             @include v.apply_font(v.$headingS);
             color: v.$white;
+            padding: 10px;
 
             span {
                 text-decoration: underline;
@@ -31,4 +51,6 @@
 
         // div.btn -> buttons are defined in ./themes/default.scss
     }
+
+    
 }

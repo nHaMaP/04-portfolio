@@ -3,7 +3,8 @@
 footer {
     
     background-color: v.$darkgrey;
-
+    height: 960px;
+    
     .contact {
 
         text-align: center;
@@ -11,8 +12,8 @@ footer {
             @include v.apply_font(v.$headingS);
             color: v.$white;
             text-transform: capitalize;
-            padding-top: 60px;
             margin-bottom: 20px;
+            padding-top: 37px;
         }
 
         p {
@@ -62,8 +63,35 @@ footer {
                 left: 170px;
             }   
         }
-    }   
+    }
+    
+    .ovals0 {
+        position: relative;
+        bottom: 275px;
+        right: 265px;
+    }
+
     .hdr {
+
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        bottom: 110px;
+
+        h1 {
+            @include v.apply_font(v.$headingM);
+            color: v.$white;
+            text-align: center;
+            margin-bottom: 20px;
+            margin-top: 20px;
+        }
+
+        nav.rr-ss ul {
+            display: flex;
+            flex-direction: row;
+            column-gap: 25.6px;  
+        }
 
         padding-bottom: 60px;
 

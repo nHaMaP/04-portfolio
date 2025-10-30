@@ -1,17 +1,21 @@
 @use '../abstracts/abstracts' as v;
 
-.hdr {
+.hdr-principal {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     position: relative;
     z-index: 1;
+    height: 363.236px;
 
-    //width: 153.99px;
-    //height: 72px;
+    margin-bottom: 40px;
 
-    margin-bottom: 60px;
+    /*background-image: url('../../assets/img/ovals.svg'), url(../../assets/img/Oval-Y.png);
+    background-repeat: no-repeat;
+    background-size: 100%, 60px;
+    background-position-x: -165px, 310px;
+    background-position-y: 130px, 243px;*/
 
     h1 {
         @include v.apply_font(v.$headingM);
@@ -24,6 +28,24 @@
     nav.rr-ss ul {
         display: flex;
         flex-direction: row;
-        column-gap: 25.6px;
+        column-gap: 25.6px;  
     }
+
+    .portrait {
+        margin: 0;
+        width: 174px;
+        height: 383px;
+
+        background-image: linear-gradient(360deg,rgba(36, 36, 36, 0.67)
+        0%, rgba(36, 36, 36, 0.35) 48%, rgba(36, 36, 36, 0) 74%);
+
+        z-index: 0;
+
+        img {
+            width: 174px;
+            position: relative;
+            top: 40px;
+        }
+    }
+    
 }
