@@ -12,6 +12,12 @@
     text-align: center;
     padding-bottom: 40px;
 
+    @include v.breakpoint(tablet) {
+        width: 768px;
+        height: 300px;
+        text-align:left;
+    }
+
     &:before {
         content:"";
         background: v.$white;
@@ -20,23 +26,56 @@
         position: relative;
         left: 2px;
         padding-top: 1px;
+
+        @include v.breakpoint(tablet) {
+            width: 725px;
+        }
+
+    }
+
+    ul {
+
+        @include v.breakpoint(tablet){
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-left: 10px;
+        }
+
+        li {
+            @include v.breakpoint(tablet){
+                width: 345px;
+                height: 98px;
+            }
+            h3 {
+                @include v.apply_font(v.$headingMS);
+                margin-bottom: 1px;
+
+                @include v.breakpoint(tablet) {
+                    @include v.apply_font(v.$headingL)
+                }
+            }
+        
+            p {
+                margin: 0;
+                @include v.apply_font(v.$bodyM);
+            }
+        }
+
     }
     
+    
 
-    h3 {
-        @include v.apply_font(v.$headingMS);
-        margin-bottom: 1px;
-    }
-
-    p {
-        margin: 0;
-        @include v.apply_font(v.$bodyM);
-    }
 
     .ovals2 {
         position: relative;
         top: -40px;
         left: 90px;
+
+        @include v.breakpoint(tablet){
+            top: -50px;
+            left: 290px;
+        }
     }
 }
 

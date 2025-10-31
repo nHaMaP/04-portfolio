@@ -7,6 +7,10 @@
 
     color: v.$white;
 
+    @include v.breakpoint(tablet){
+        margin-left: 15px;
+    }
+
     &::before {
         content: "";
         background: #FFFFFF;
@@ -14,6 +18,11 @@
         height: 1px;
         position: relative;
         left: 8px;
+
+        @include v.breakpoint(tablet) {
+            display: none;
+ 
+        }
     }
 
     .header-projects {
@@ -29,6 +38,10 @@
         color: v.$white;
 
         padding-top:50px;
+
+        @include v.breakpoint(tablet){
+            width: 715px;
+        }
 
         h2 {
             @include v.apply_font(v.$headingS);
@@ -50,11 +63,22 @@
         flex-direction: column;
 
         margin-left: 10px;
-        
+
+                
+        @include v.breakpoint(tablet){
+            width: 716px;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
 
         article {
 
             margin-bottom: 40px;
+
+            @include v.breakpoint(tablet){
+                width: 343px;
+            }
 
             figure {
                 margin: 0;

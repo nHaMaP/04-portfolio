@@ -4,8 +4,18 @@ footer {
     
     background-color: v.$darkgrey;
     height: 960px;
+
+    @include v.breakpoint(tablet){
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
     
     .contact {
+
+        @include v.breakpoint(tablet){
+            width: 445px;
+        }
 
         text-align: center;
         h1 {
@@ -14,12 +24,23 @@ footer {
             text-transform: capitalize;
             margin-bottom: 20px;
             padding-top: 37px;
+
+            @include v.breakpoint(tablet){
+                font-size: 72px;
+                line-height: 72px;
+                letter-spacing: -2.05px;
+            }
         }
 
         p {
             @include v.apply_font(v.$bodyM);
             color: v.$grey;
             margin-bottom: 50px;
+
+            @include v.breakpoint(tablet) {
+                font-size: 18px;
+                line-height: 18px;
+            }
         }   
     }
 
@@ -35,6 +56,10 @@ footer {
             margin-right: 10px;
             row-gap: 32px;
 
+            @include v.breakpoint(tablet){
+                align-items: center;
+            }
+
             p {
 
                 input, textarea {
@@ -49,6 +74,10 @@ footer {
                     border: none;
                     border-bottom: 1px solid v.$white;
                     background-color: v.$darkgrey;
+
+                    @include v.breakpoint(tablet){
+                        width: 420px;
+                    }
     
                 }
 
@@ -61,7 +90,28 @@ footer {
                 @include v.btn;
                 position: relative;
                 left: 170px;
+
+                @include v.breakpoint(tablet){
+                    left: 130px;
+                }
             }   
+        }
+
+        &::after {
+            content:"";
+            background: v.$white;
+            width: 343px;
+            height: 1px;
+            position: relative;
+            left: 10px;
+            top: 155px;
+            padding-top: 1px;
+            display: inline-block;            
+            
+            @include v.breakpoint(tablet) {
+                width: 725px;
+                left: 0;
+            }
         }
     }
     
@@ -69,6 +119,11 @@ footer {
         position: relative;
         bottom: 275px;
         right: 265px;
+
+        @include v.breakpoint(tablet) {
+            bottom: 180px;
+            right: 370px;
+        }
     }
 
     .hdr {
@@ -77,7 +132,14 @@ footer {
         flex-direction: column;
         align-items: center;
         position: relative;
+        padding-bottom: 60px;
         bottom: 110px;
+
+        @include v.breakpoint(tablet) {
+            width: 725px;
+            flex-direction: row;
+            justify-content: space-between;
+        }
 
         h1 {
             @include v.apply_font(v.$headingM);
@@ -85,16 +147,20 @@ footer {
             text-align: center;
             margin-bottom: 20px;
             margin-top: 20px;
+
+            @include v.breakpoint(tablet){
+                margin-left:10px;
+            }
         }
 
         nav.rr-ss ul {
             display: flex;
             flex-direction: row;
             column-gap: 25.6px;  
+
+            @include v.breakpoint(tablet){
+                margin-right:5px;
+            }
         }
-
-        padding-bottom: 60px;
-
     }
-
 }

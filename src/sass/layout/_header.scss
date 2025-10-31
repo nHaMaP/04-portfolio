@@ -32,7 +32,7 @@
         @include v.breakpoint(tablet){
             align-self: start;
 
-            bottom: 70px;
+            bottom: 65px;
             left: 30px;
 
             font-size: 32px;    
@@ -54,7 +54,7 @@
             @include v.breakpoint(tablet) {
                 position: relative;
                 left: 20px;
-                bottom: 20px;
+                bottom: 15px;
             }
         
             ul {

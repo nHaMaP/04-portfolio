@@ -9,6 +9,10 @@
     height: 215px;
     padding-bottom: 80px;
 
+    @include v.breakpoint(tablet){
+        padding-bottom:0;
+        margin-bottom:-24px;
+    }
 
     .ovals3{
         position: relative;
@@ -56,6 +60,10 @@
             color: v.$white;
             padding: 10px;
 
+            @include v.breakpoint(tablet){
+                margin-bottom:25px;
+            }
+
             .forced {
                 display:none;
 
@@ -85,6 +93,11 @@
             @include v.apply_font(v.$bodyM);
             color:v.$grey;
             margin-bottom: 24px;
+
+            @include v.breakpoint(tablet){
+                margin-bottom: 34px;
+                @include v.apply_font(v.$bodyL);
+            }
         }
 
         // div.btn -> buttons are defined in ./themes/default.scss
