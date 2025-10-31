@@ -14,6 +14,11 @@
         position: relative;
         bottom: 280px;
         right: 235px;
+
+        @include v.breakpoint(tablet){
+            bottom: 350px;
+            right: 325px;
+        }
     }
 
     .ovals3-2 {
@@ -21,6 +26,13 @@
         width: 15%;
         bottom: 280px;
         left: 155px;
+        z-index: 1;
+
+        @include v.breakpoint(tablet){
+            width: 7.45%;
+            bottom: 125px;
+            left: 370px;
+        }
     }
 
 
@@ -30,11 +42,37 @@
         position: relative;
         bottom: 260px;
 
+        @include v.breakpoint(tablet){
+            text-align: start;
+            width: 445px;
+            position: relative;
+            bottom: 535px;
+            right: 135px;
+        }
+
         h1 {
             margin: 0;
             @include v.apply_font(v.$headingS);
             color: v.$white;
             padding: 10px;
+
+            .forced {
+                display:none;
+
+                @include v.breakpoint(tablet) {
+                    display: inline;
+                }
+            }
+
+            @include v.breakpoint(tablet) {
+                font-size: 72px;
+                line-height: 72px;
+                letter-spacing: -2.05px;
+                width: 443px;
+                height: 233px;
+                position: relative;
+                z-index: 2;
+            }
 
             span {
                 text-decoration: underline;

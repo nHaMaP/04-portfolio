@@ -2,13 +2,13 @@
 
 .hdr-principal {
     display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     
     position: relative;
-        top: 60px;
-        z-index: 1;
+    top: 60px;
+    z-index: 1;
 
     height: 363.236px;
     margin-bottom: 40px;
@@ -17,6 +17,7 @@
 
     @include v.breakpoint(tablet){
         flex-direction: row;
+        justify-content: space-between
 
     }
 
@@ -27,35 +28,83 @@
         text-align: center;
         margin-bottom: 20px;
         margin-top: 20px;
+
+        @include v.breakpoint(tablet){
+            align-self: start;
+
+            bottom: 70px;
+            left: 30px;
+
+            font-size: 32px;    
+            line-height: 32px;
+            letter-spacing: -0.44px;
+
+            position: relative;
+        }
     }
 
     .menu {
         display: flex;
         flex-direction: column;
+        align-items: center;
 
 
-        nav.rr-ss ul {
-            display: flex;
-            flex-direction: row;
-            column-gap: 25.6px;  
+        nav.rr-ss {
+
+            @include v.breakpoint(tablet) {
+                position: relative;
+                left: 20px;
+                bottom: 20px;
+            }
+        
+            ul {
+                display: flex;
+                flex-direction: row;
+                column-gap: 25.6px;
+                
+                li {
+
+                    a {
+                        @include v.breakpoint(talbet) {
+                            width: 24.61px;
+                        }
+                    }
+                    
+                }
+            }
         }
-    
+
         .portrait {
             margin: 0;
-            width: 174px;
+            width: 175px;
             height: 383px;
     
             background-image: linear-gradient(360deg,rgba(36, 36, 36, 0.47)
             0%, rgba(36, 36, 36, 0.35) 48%, rgba(36, 36, 36, 0) 74%);
             
             position: relative;
-                bottom: 120px;
+            bottom: 120px;
+            z-index: -5;
 
+            @include v.breakpoint(tablet){
+                bottom: 65px;
+                background-image: none;
+                background-color: v.$darkgrey;
+                width: 320px;
+
+            }
     
             img {
                 width: 174px;
                 position: relative;
                 top: 155px;
+
+                @include v.breakpoint(tablet) {
+                    width: 335px;
+                    top: 90px;
+                    background-color: v.$darkgrey;
+                    z-index: -1;
+                }
             }
         }
     }
