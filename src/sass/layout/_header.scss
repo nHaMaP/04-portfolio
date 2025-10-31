@@ -2,20 +2,24 @@
 
 .hdr-principal {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    
     position: relative;
-    z-index: 1;
-    height: 363.236px;
+        top: 60px;
+        z-index: 1;
 
+    height: 363.236px;
     margin-bottom: 40px;
 
-    /*background-image: url('../../assets/img/ovals.svg'), url(../../assets/img/Oval-Y.png);
-    background-repeat: no-repeat;
-    background-size: 100%, 60px;
-    background-position-x: -165px, 310px;
-    background-position-y: 130px, 243px;*/
+    
+
+    @include v.breakpoint(tablet){
+        flex-direction: row;
+
+    }
+
 
     h1 {
         @include v.apply_font(v.$headingM);
@@ -25,27 +29,36 @@
         margin-top: 20px;
     }
 
-    nav.rr-ss ul {
+    .menu {
         display: flex;
-        flex-direction: row;
-        column-gap: 25.6px;  
-    }
+        flex-direction: column;
 
-    .portrait {
-        margin: 0;
-        width: 174px;
-        height: 383px;
 
-        background-image: linear-gradient(360deg,rgba(36, 36, 36, 0.47)
-        0%, rgba(36, 36, 36, 0.35) 48%, rgba(36, 36, 36, 0) 74%);
-
-        z-index: 0;
-
-        img {
+        nav.rr-ss ul {
+            display: flex;
+            flex-direction: row;
+            column-gap: 25.6px;  
+        }
+    
+        .portrait {
+            margin: 0;
             width: 174px;
+            height: 383px;
+    
+            background-image: linear-gradient(360deg,rgba(36, 36, 36, 0.47)
+            0%, rgba(36, 36, 36, 0.35) 48%, rgba(36, 36, 36, 0) 74%);
+            
             position: relative;
-            top: 40px;
+                bottom: 120px;
+
+    
+            img {
+                width: 174px;
+                position: relative;
+                top: 155px;
+            }
         }
     }
+
     
 }

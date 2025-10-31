@@ -19,5 +19,12 @@
 
     ul {
         @include v.reset_ul;
-    } 
+    }
+    
+    //Responsive: 
+    @include v.breakpoint (tablet) {
+        min-width: 768px;
+        max-width: 768px;
+    }
+
 }
