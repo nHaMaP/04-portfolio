@@ -21,6 +21,10 @@
 
     }
 
+    @include v.breakpoint(desktopS){
+        margin: 40px 117.35px 0 117.035px;
+    }
+
 
     h1 {
         @include v.apply_font(v.$headingM);
@@ -33,7 +37,7 @@
             align-self: start;
 
             bottom: 65px;
-            left: 30px;
+            left: 0px;
 
             font-size: 32px;    
             line-height: 32px;
@@ -41,6 +45,7 @@
 
             position: relative;
         }
+
     }
 
     .menu {
@@ -48,14 +53,16 @@
         flex-direction: column;
         align-items: center;
 
-
+        
         nav.rr-ss {
 
             @include v.breakpoint(tablet) {
                 position: relative;
-                left: 20px;
+                right: -60px;
                 bottom: 15px;
             }
+
+        
         
             ul {
                 display: flex;
@@ -91,7 +98,10 @@
                 background-image: none;
                 background-color: v.$darkgrey;
                 width: 320px;
+            }
 
+            @include v.breakpoint(desktopS){
+                width: 335px;
             }
     
             img {

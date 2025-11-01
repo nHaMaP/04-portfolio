@@ -27,4 +27,16 @@
         max-width: 768px;
     }
 
+    @include v.breakpoint(desktopS) {
+        min-width: 1024px; //117.35px
+        max-width: 1024px;      
+    }
+
+    /*@include v.breakpoint(desktopXL) {
+        margin-left: 165px; // => 11.46%
+        margin-rigth: 165px;
+        width: 1110px; //content => 77.083%
+        max-width: 1440px;
+    }*/
+
 }

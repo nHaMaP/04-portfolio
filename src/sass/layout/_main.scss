@@ -14,6 +14,10 @@
         margin-bottom:-24px;
     }
 
+    @include v.breakpoint(desktopS){
+        margin: 0 117.35px 0 117.035px;
+    }
+
     .ovals3{
         position: relative;
         bottom: 280px;
@@ -27,15 +31,20 @@
 
     .ovals3-2 {
         position: relative;
-        width: 15%;
+        width: 30%;
         bottom: 280px;
-        left: 155px;
+        left: 185px;
         z-index: 1;
 
         @include v.breakpoint(tablet){
-            width: 7.45%;
+            width: 15%;
             bottom: 125px;
-            left: 370px;
+            left: 385px;
+        }
+
+        @include v.breakpoint(desktopS){
+            width: 12.5%;
+            left:60px;
         }
     }
 
@@ -54,6 +63,11 @@
             right: 135px;
         }
 
+        @include v.breakpoint(desktopS){
+            bottom: 515px;
+            right: 170px;
+        }
+
         h1 {
             margin: 0;
             @include v.apply_font(v.$headingS);
@@ -62,6 +76,24 @@
 
             @include v.breakpoint(tablet){
                 margin-bottom:25px;
+                font-size: 72px;
+                line-height: 72px;
+                letter-spacing: -2.05px;
+                width: 443px;
+                height: 233px;
+                position: relative;
+                z-index: 2;
+            }
+
+            @include v.breakpoint(desktopS){       
+               width: 580px;
+                padding: 0;
+                font-size: 62px;
+                height: 150px;
+            }
+
+            @include v.breakpoint(desktopL){ //1440
+                @include v.apply_font(v.$headingXL);
             }
 
             .forced {
@@ -70,16 +102,10 @@
                 @include v.breakpoint(tablet) {
                     display: inline;
                 }
-            }
 
-            @include v.breakpoint(tablet) {
-                font-size: 72px;
-                line-height: 72px;
-                letter-spacing: -2.05px;
-                width: 443px;
-                height: 233px;
-                position: relative;
-                z-index: 2;
+                @include v.breakpoint(desktopS){
+                    display: none;
+                }
             }
 
             span {
@@ -97,6 +123,10 @@
             @include v.breakpoint(tablet){
                 margin-bottom: 34px;
                 @include v.apply_font(v.$bodyL);
+            }
+
+            @include v.breakpoint(desktopS){
+                margin-bottom:55px;
             }
         }
 

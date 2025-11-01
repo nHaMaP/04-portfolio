@@ -9,112 +9,174 @@ footer {
         display: flex;
         flex-direction: column;
         align-items: center;
+        height: 980px;
     }
-    
-    .contact {
+
+    @include v.breakpoint(desktopS){
+        height: 680px;
+    }
+
+    .foot-cont{
 
         @include v.breakpoint(tablet){
-            width: 445px;
-        }
-
-        text-align: center;
-        h1 {
-            @include v.apply_font(v.$headingS);
-            color: v.$white;
-            text-transform: capitalize;
-            margin-bottom: 20px;
-            padding-top: 37px;
-
-            @include v.breakpoint(tablet){
-                font-size: 72px;
-                line-height: 72px;
-                letter-spacing: -2.05px;
-            }
-        }
-
-        p {
-            @include v.apply_font(v.$bodyM);
-            color: v.$grey;
-            margin-bottom: 50px;
-
-            @include v.breakpoint(tablet) {
-                font-size: 18px;
-                line-height: 18px;
-            }
-        }   
-    }
-
-    .contact-form {
-
-        margin-bottom: 127px;
-
-        form {
             display: flex;
             flex-direction: column;
-            align-items: flex-start;
-            margin-left: 10px;
-            margin-right: 10px;
-            row-gap: 32px;
+            align-items: center;
+        }
 
+        @include v.breakpoint(desktopS){
+            display: flex;
+            flex-direction: row;
+            column-gap: 80px;;
+            margin: 0 117.35px 0 117.035px;
+            position: relative;
+            left: -25px;
+        }
+
+        .contact {
+    
             @include v.breakpoint(tablet){
-                align-items: center;
+                width: 445px;
             }
 
-            p {
-
-                input, textarea {
-                    @include v.apply_font(v.$bodyM);
-                    letter-spacing: -0.22px;
-                    color: v.$grey;
-                    text-transform: uppercase;
-
-                    width: 300px;
-                    margin-left: 20px;
-                    margin-right:20px;
-                    border: none;
-                    border-bottom: 1px solid v.$white;
-                    background-color: v.$darkgrey;
-
-                    @include v.breakpoint(tablet){
-                        width: 420px;
-                    }
+            @include v.breakpoint(desktopS){
+                width: 345px;
+            }
     
+            text-align: center;
+            h1 {
+                @include v.apply_font(v.$headingS);
+                color: v.$white;
+                text-transform: capitalize;
+                margin-bottom: 20px;
+                padding-top: 37px;
+    
+                @include v.breakpoint(tablet){
+                    font-size: 72px;
+                    line-height: 72px;
+                    letter-spacing: -2.05px;
                 }
 
-                textarea {
-                    height: 147px;
-                }                
+                @include v.breakpoint(desktopS){
+                    width: 270px;
+                    position: relative;
+                    bottom: 125px;
+                }
             }
+    
+            p {
+                @include v.apply_font(v.$bodyM);
+                color: v.$grey;
+                margin-bottom: 50px;
+    
+                @include v.breakpoint(tablet) {
+                    font-size: 18px;
+                    line-height: 18px;
+                }
 
-            .btn {                  
-                @include v.btn;
-                position: relative;
-                left: 170px;
-
-                @include v.breakpoint(tablet){
-                    left: 130px;
+                @include v.breakpoint(desktopS){
+                    text-align: start;
+                    font-size: 14px;
+                    width: 345px;
                 }
             }   
         }
+    
+        .contact-form {
+    
+            margin-bottom: 127px;
 
-        &::after {
-            content:"";
-            background: v.$white;
-            width: 343px;
-            height: 1px;
-            position: relative;
-            left: 10px;
-            top: 155px;
-            padding-top: 1px;
-            display: inline-block;            
-            
-            @include v.breakpoint(tablet) {
-                width: 725px;
-                left: 0;
+            @include v.breakpoint(desktopS){
+                width: 300px;
+            }
+    
+            form {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                margin-left: 10px;
+                margin-right: 10px;
+                row-gap: 32px;
+    
+                @include v.breakpoint(tablet){
+                    align-items: center;
+                }
+
+                @include v.breakpoint(desktopS){
+                    position: relative;
+                    top: 50px;
+                    width: 300px;
+                }
+    
+                p {
+    
+                    input, textarea {
+                        @include v.apply_font(v.$bodyM);
+                        letter-spacing: -0.22px;
+                        color: v.$grey;
+                        text-transform: uppercase;
+    
+                        width: 300px;
+                        margin-left: 20px;
+                        margin-right:20px;
+                        border: none;
+                        border-bottom: 1px solid v.$white;
+                        background-color: v.$darkgrey;
+    
+                        @include v.breakpoint(tablet){
+                            width: 420px;
+                        }
+
+                        @include v.breakpoint(desktopS){
+                            width: 300px;
+                        }
+        
+                    }
+    
+                    textarea {
+                        height: 147px;
+                    }                
+                }
+    
+                .btn {                  
+                    @include v.btn;
+                    position: relative;
+                    left: 170px;
+    
+                    @include v.breakpoint(tablet){
+                        left: 130px;
+                    }
+
+                    @include v.breakpoint(desktopS){
+                        left:80px;
+                    }
+                }   
+            }
+    
+            &::after {
+                content:"";
+                background: v.$white;
+                width: 343px;
+                height: 1px;
+                position: relative;
+                left: 10px;
+                top: 155px;
+                padding-top: 1px;
+                display: inline-block;            
+                
+                @include v.breakpoint(tablet) {
+                    width: 725px;
+                    left: 0;
+                }
+
+                @include v.breakpoint(desktopS){
+                    width: 735px;
+                    left: -400px;
+                    top: 130px;
+                }
             }
         }
     }
-    
     .ovals0 {
         position: relative;
         bottom: 275px;
@@ -123,6 +185,11 @@ footer {
         @include v.breakpoint(tablet) {
             bottom: 180px;
             right: 370px;
+        }
+
+        @include v.breakpoint(desktopS){
+            bottom: 315px;
+            right: 470px;
         }
     }
 
@@ -164,3 +231,5 @@ footer {
         }
     }
 }
+
+//margin: 0 117.35px 0 117.035px;

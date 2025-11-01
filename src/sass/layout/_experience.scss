@@ -18,6 +18,11 @@
         text-align:left;
     }
 
+    @include v.breakpoint(desktopS){
+        width: 800px;
+        margin: 0 117.35px 0 117.035px;
+    }
+
     &:before {
         content:"";
         background: v.$white;
@@ -31,6 +36,9 @@
             width: 725px;
         }
 
+        @include v.breakpoint(desktopS){
+            width: 800px;
+        }
     }
 
     ul {
@@ -42,17 +50,30 @@
             margin-left: 10px;
         }
 
+        @include v.breakpoint(desktopS){
+            row-gap: 60px;
+        }
+
         li {
             @include v.breakpoint(tablet){
                 width: 345px;
                 height: 98px;
             }
+
+            @include v.breakpoint(desktopS){
+                width: 260px;
+            }
+
             h3 {
                 @include v.apply_font(v.$headingMS);
                 margin-bottom: 1px;
 
                 @include v.breakpoint(tablet) {
                     @include v.apply_font(v.$headingL)
+                }
+
+                @include v.breakpoint(desktopS){
+                    font-size: 40px;
                 }
             }
         
@@ -65,16 +86,22 @@
     }
     
     
-
-
     .ovals2 {
         position: relative;
         top: -40px;
         left: 90px;
+        position: relative;
+        left: 210px;
+        rotate: 180deg;
 
         @include v.breakpoint(tablet){
             top: -50px;
-            left: 290px;
+            left: 400px;
+        }
+
+        @include v.breakpoint(desktopS){
+            left: 540px;
+            top: -65px;
         }
     }
 }
