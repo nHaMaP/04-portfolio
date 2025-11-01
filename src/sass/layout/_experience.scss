@@ -23,6 +23,11 @@
         margin: 0 117.35px 0 117.035px;
     }
 
+    @include v.breakpoint(desktopL){
+        width: 1045px;
+        margin: 0 165px 0 165px;
+    }
+
     &:before {
         content:"";
         background: v.$white;
@@ -39,6 +44,11 @@
         @include v.breakpoint(desktopS){
             width: 800px;
         }
+
+        @include v.breakpoint(desktopL){
+            width: 1170px;
+            left: 15px;
+        }
     }
 
     ul {
@@ -52,6 +62,14 @@
 
         @include v.breakpoint(desktopS){
             row-gap: 60px;
+        }
+
+        @include v.breakpoint(desktopL){
+            row-gap: 60px;
+            column-gap: 105px;
+            width: 1120px;
+            position: relative;
+            left: -40px;
         }
 
         li {
@@ -75,11 +93,19 @@
                 @include v.breakpoint(desktopS){
                     font-size: 40px;
                 }
+
+                @include v.breakpoint(desktopL){
+                    @include v.apply_font(v.$headingL)
+                }
             }
         
             p {
                 margin: 0;
                 @include v.apply_font(v.$bodyM);
+
+                @include v.breakpoint(desktopL){
+                    @include v.apply_font(v.$bodyL);
+                }
             }
         }
 
@@ -102,6 +128,11 @@
         @include v.breakpoint(desktopS){
             left: 540px;
             top: -65px;
+        }
+
+        @include v.breakpoint(desktopL){
+            top: 0px;
+            left: 710px;
         }
     }
 }

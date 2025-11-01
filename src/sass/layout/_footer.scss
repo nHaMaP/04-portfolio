@@ -41,6 +41,8 @@ footer {
 
             @include v.breakpoint(desktopS){
                 width: 345px;
+                position: relative;
+                top: -45px;
             }
     
             text-align: center;
@@ -78,6 +80,8 @@ footer {
                     text-align: start;
                     font-size: 14px;
                     width: 345px;
+                    position: relative;
+                    top:-115px;
                 }
             }   
         }

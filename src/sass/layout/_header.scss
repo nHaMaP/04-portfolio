@@ -25,6 +25,11 @@
         margin: 40px 117.35px 0 117.035px;
     }
 
+    @include v.breakpoint(desktopL){
+        margin: 40px 165px 0 165px;
+        padding-top:20px;
+    }
+
 
     h1 {
         @include v.apply_font(v.$headingM);
@@ -44,6 +49,11 @@
             letter-spacing: -0.44px;
 
             position: relative;
+        }
+
+        @include v.breakpoint(desktopL){
+            bottom: 120px;
+            left: -45px;
         }
 
     }
@@ -113,6 +123,10 @@
             @include v.breakpoint(desktopS){
                 width: 335px;
             }
+
+            @include v.breakpoint(desktopL){
+                height: 502px;
+            }
     
             img {
                 width: 174px;
@@ -124,6 +138,10 @@
                     top: 90px;
                     background-color: v.$darkgrey;
                     z-index: -1;
+                }
+
+                @include v.breakpoint(desktopL){
+                    top: 120px;
                 }
             }
         }

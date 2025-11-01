@@ -15,6 +15,10 @@
         margin: 0 117.35px 0 117.035px;
     }
 
+    @include v.breakpoint(desktopL){
+        margin: 0 165px 0 165px;
+    }
+
     &::before {
         content: "";
         background: #FFFFFF;
@@ -48,6 +52,11 @@
             padding-bottom: 25px
         }
 
+        @include v.breakpoint(desktopL){
+            padding-top: 116px;
+            width: 1095px;
+        }
+
 
         h2 {
             @include v.apply_font(v.$headingS);
@@ -78,6 +87,12 @@
             gap: 30px;
         }
 
+        @include v.breakpoint(desktopL){
+            width:1095px;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
         article {
 
             margin-bottom: 40px;
@@ -86,11 +101,19 @@
                 width: 343px;
             }
 
+            @include v.breakpoint(desktopL){
+                width: 530px;
+            }
+
             figure {
                 margin: 0;
                 img { 
                     width: 343px;
                     margin-bottom: 20px;
+
+                    @include v.breakpoint(desktopL){
+                        width:530px;
+                    }
                 }
             }
 

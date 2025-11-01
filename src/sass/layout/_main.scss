@@ -18,6 +18,10 @@
         margin: 0 117.35px 0 117.035px;
     }
 
+    @include v.breakpoint(desktopL){
+        margin:0 165px 0 165px;
+    }
+
     .ovals3{
         position: relative;
         bottom: 280px;
@@ -26,6 +30,10 @@
         @include v.breakpoint(tablet){
             bottom: 350px;
             right: 325px;
+        }
+
+        @include v.breakpoint(desktopL){
+            right: 505px;
         }
     }
 
@@ -45,6 +53,12 @@
         @include v.breakpoint(desktopS){
             width: 12.5%;
             left:60px;
+        }
+
+        @include v.breakpoint(desktopL){
+            width: 7.5%;
+            left: 220px;
+            bottom: 145px;
         }
     }
 
@@ -66,6 +80,10 @@
         @include v.breakpoint(desktopS){
             bottom: 515px;
             right: 170px;
+        }
+
+        @include v.breakpoint(desktopL){
+            right: 380px;
         }
 
         h1 {
@@ -94,6 +112,8 @@
 
             @include v.breakpoint(desktopL){ //1440
                 @include v.apply_font(v.$headingXL);
+                width: 706px;
+                margin-bottom:70px;
             }
 
             .forced {
