@@ -32,7 +32,11 @@
         max-width: 1024px;      
     }
 
-    /*@include v.breakpoint(desktopXL) {
+    @include v.breakpoint(desktopL) {
+        max-width: 1440px;
+    }
+
+    /*(desktopXL) {
         margin-left: 165px; // => 11.46%
         margin-rigth: 165px;
         width: 1110px; //content => 77.083%

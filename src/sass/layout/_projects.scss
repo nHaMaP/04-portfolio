@@ -126,6 +126,7 @@
                 display: flex;
                 flex-direction: row;
                 column-gap: 30px;
+
                 @include v.btn;
                 margin-bottom: 40px;
 
@@ -138,6 +139,10 @@
                     a {
                         color: v.$white;
                         text-decoration-color: v.$green;
+
+                        &:hover {
+                            color: v.$green;
+                        }
                     }
                 }
 

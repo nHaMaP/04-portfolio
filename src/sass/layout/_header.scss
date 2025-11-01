@@ -72,8 +72,18 @@
                 li {
 
                     a {
-                        @include v.breakpoint(talbet) {
-                            width: 24.61px;
+                        svg {
+                            width: 19.61px;
+                            fill:v.$white;
+
+                            @include v.breakpoint(tablet) {
+                                width: 24.61px;
+                            }
+
+                            &:hover {
+                                fill:v.$green;
+
+                            }
                         }
                     }
                     

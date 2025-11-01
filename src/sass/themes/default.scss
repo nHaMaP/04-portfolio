@@ -5,5 +5,9 @@ body {
 
     .btn {
         @include v.btn;
+
+        &:hover {
+            color:v.$green;
+        }
     }
 }
