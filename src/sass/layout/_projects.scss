@@ -106,74 +106,113 @@
             }
 
             figure {
+                width: 347px;
+                height: 253px;
                 margin: 0;
-                img { 
-                    width: 343px;
-                    margin-bottom: 20px;
+                margin-bottom: 20px;
+                position: relative;
 
+                @include v.breakpoint(desktopS){
+                    &::after {
+                        content:"";
+                        position: absolute;
+                        inset:0;
+                        opacity: 0;
+                        background-color: rgba(0,0,0,0);
+                        transition: background-color 0.4s ease, opacity 0.25s ease;
+                        z-index: 2;
+                    }
+
+                    &:hover::after{
+                        background-color:rgba(0,0,0,0.6);
+                        opacity: 1;
+                    }
+
+                    &:hover{
+                        .buttons {
+                            visibility: visible;
+                        }
+                    }
+                }
+
+                @include v.breakpoint(desktopL){
+                    width: 530px;
+                }
+
+                img {
+                    margin:20px 0 20px 0; 
+                    display: block;
+                    width: 343px;
+
+                    position: relative;
+                    z-index: 1;
+                    
                     @include v.breakpoint(desktopL){
                         width:530px;
                     }
                 }
-            }
 
-            h4 {
-                margin-top: 0;
-                margin-bottom: 7px;
-                @include v.apply_font(v.$headingM);
-                text-transform: uppercase;
+                h4 {
+                    margin-top: 0;
+                    margin-bottom: 7px;
+                    @include v.apply_font(v.$headingM);
+                    text-transform: uppercase;
+                }
+    
+                .technologies {
 
-            }
-
-            .technologies {
-                
-                ul {
+                    margin-bottom: 20px;
+                    
+                    ul {
+                        display: flex;
+                        flex-direction: row;
+                        gap: 18px;
+    
+                        li {
+    
+                            p {
+                                @include v.apply_font(v.$bodyL);      
+                                text-transform: uppercase;
+                                margin-bottom: 20px;
+                            }
+                        }
+                    }
+                }
+    
+                .buttons {
                     display: flex;
                     flex-direction: row;
-                    gap: 18px;
-
+                    column-gap: 30px;
+    
+                    @include v.btn;
+                    margin-bottom: 40px;
+    
+                    @include v.breakpoint(desktopS){
+                        flex-direction: column;
+                        align-items: center;
+                        margin: 0;
+                        width: 280px;
+                        gap: 45px;
+                        position: relative;
+                        left: 80px;
+                        bottom: 310px;
+                        z-index: 5;
+                        visibility: hidden;
+                    }
+    
                     li {
-
-                        p {
-                            @include v.apply_font(v.$bodyL);      
-                            text-transform: uppercase;
-                            margin-bottom: 20px;
+                        a {
+                            color: v.$white;
+                            text-decoration-color: v.$green;
+    
+                            &:hover {
+                                color: v.$green;
+                            }
                         }
                     }
                 }
-
-
-            }
-
-            .buttons {
-                display: flex;
-                flex-direction: row;
-                column-gap: 30px;
-
-                @include v.btn;
-                margin-bottom: 40px;
-
-                @include v.breakpoint(desktopS){
-                    //visibility: hidden;
-                    display: none;
-                }
-
-                li {
-                    a {
-                        color: v.$white;
-                        text-decoration-color: v.$green;
-
-                        &:hover {
-                            color: v.$green;
-                        }
-                    }
-                }
-
-
             }
 
         }
-
     }
-
 }
