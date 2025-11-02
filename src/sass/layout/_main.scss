@@ -150,7 +150,16 @@
             }
         }
 
-        // div.btn -> buttons are defined in ./themes/default.scss
+        .btn {
+            // div.btn -> buttons are defined in ./themes/default.scss
+
+            @include v.breakpoint(desktopS){
+                position: relative;
+                z-index: 2;
+            }
+        }
+
+        
     }
 
     
