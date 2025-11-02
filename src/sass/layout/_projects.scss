@@ -34,7 +34,7 @@
     }
 
     .header-projects {
-        width: 343px;
+        width: 340px;
 
         display: flex;
         flex-direction: row;
@@ -94,15 +94,20 @@
         }
 
         article {
-
+            height: 500px;
             margin-bottom: 40px;
 
             @include v.breakpoint(tablet){
                 width: 343px;
             }
 
+            @include v.breakpoint(desktopS){
+                height: 390px;
+            }
+
             @include v.breakpoint(desktopL){
                 width: 530px;
+                height: 515px;
             }
 
             figure {
@@ -137,6 +142,7 @@
 
                 @include v.breakpoint(desktopL){
                     width: 530px;
+                    height: 391px;
                 }
 
                 img {
@@ -155,6 +161,8 @@
                 h4 {
                     margin-top: 0;
                     margin-bottom: 7px;
+                    margin-left:5px;
+
                     @include v.apply_font(v.$headingM);
                     text-transform: uppercase;
                 }
@@ -162,6 +170,7 @@
                 .technologies {
 
                     margin-bottom: 20px;
+                    margin-left:5px;
                     
                     ul {
                         display: flex;
@@ -183,6 +192,7 @@
                     display: flex;
                     flex-direction: row;
                     column-gap: 30px;
+                    margin-left: 5px;
     
                     @include v.btn;
                     margin-bottom: 40px;
@@ -194,10 +204,16 @@
                         width: 280px;
                         gap: 45px;
                         position: relative;
-                        left: 80px;
-                        bottom: 310px;
+                        left: 30px;
+                        bottom: 320px;
                         z-index: 5;
                         visibility: hidden;
+                    }
+
+                    @include v.breakpoint(desktopL){
+                        left: 125px;
+                        bottom: 405px;
+                        gap: 65px;
                     }
     
                     li {

@@ -138,7 +138,7 @@
         p {
             @include v.apply_font(v.$bodyM);
             color:v.$grey;
-            margin-bottom: 24px;
+            margin-bottom: 36px;
 
             @include v.breakpoint(tablet){
                 margin-bottom: 34px;

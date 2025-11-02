@@ -42,13 +42,17 @@
             align-self: start;
 
             bottom: 65px;
-            left: 0px;
+            left: 40px;
 
             font-size: 32px;    
             line-height: 32px;
             letter-spacing: -0.44px;
 
             position: relative;
+        }
+
+        @include v.breakpoint(desktopS){
+            left: 0;
         }
 
         @include v.breakpoint(desktopL){
@@ -68,8 +72,12 @@
 
             @include v.breakpoint(tablet) {
                 position: relative;
-                right: -60px;
+                right: -35px;
                 bottom: 15px;
+            }
+
+            @include v.breakpoint(desktopS){
+                right: -50px;
             }
 
         

@@ -16,6 +16,7 @@
         width: 768px;
         height: 300px;
         text-align:left;
+        margin-bottom: 140px;
     }
 
     @include v.breakpoint(desktopS){
@@ -58,6 +59,7 @@
             flex-wrap: wrap;
             justify-content: space-around;
             margin-left: 10px;
+            margin-bottom: 25px;
         }
 
         @include v.breakpoint(desktopS){
@@ -75,11 +77,16 @@
         li {
             @include v.breakpoint(tablet){
                 width: 345px;
-                height: 98px;
+                height: 150px;
             }
 
             @include v.breakpoint(desktopS){
                 width: 260px;
+            }
+
+            @include v.breakpoint(desktopL){
+                position: relative;
+                left: 55px;
             }
 
             h3 {
@@ -127,11 +134,11 @@
 
         @include v.breakpoint(desktopS){
             left: 540px;
-            top: -65px;
+            top: -150px;
         }
 
         @include v.breakpoint(desktopL){
-            top: 0px;
+            top: -135px;
             left: 710px;
         }
     }
